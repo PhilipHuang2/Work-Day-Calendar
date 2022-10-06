@@ -24,16 +24,19 @@ var stor;
 if(stor = localStorage.getItem(day))
 {
     stor = JSON.parse(stor);
-    
+    // for each element in stor
+    // find the associated textarea using jquery and data-time
+    //and set the val() to the amount;
+    for(key in stor) {
+        // console.log($("div[data-time='" + key + "'"));
+        $("div[data-time='" + key + "'").siblings('textarea').val(stor[key]);
+    }
 }
-
 
 //create an event listener at each button
 // that takes the data in text area and stores it
 // in local storage
-$("button").on("click", function() {
-     
-    
+$("button").on("click", function() {  
     if(stor = localStorage.getItem(day))
         stor = JSON.parse(stor);
     else
