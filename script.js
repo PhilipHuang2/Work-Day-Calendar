@@ -29,7 +29,6 @@ if(stor = localStorage.getItem(day))
     // find the associated textarea using jquery and data-time
     //and set the val() to the amount;
     for(key in stor) {
-        // console.log($("div[data-time='" + key + "'"));
         $("div[data-time='" + key + "'").siblings('textarea').val(stor[key]);
     }
 }
@@ -45,8 +44,6 @@ $("button").on("click", function() {
     var section = $(this).siblings("div").text();
     stor[section] = $(this).siblings("textarea").val()
     localStorage.setItem(day, JSON.stringify(stor));
-    // console.log(moment().format("D-M-YYYY"));
-    // console.log($(this).siblings("textarea").val());
 })
 
 
