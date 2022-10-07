@@ -1,89 +1,66 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Calender
+## Description
 
-## Your Task
+This web page is spiritual successor to my previous project, the web page.  In it, I created a single work day calender with local storage to remember the tasks the user has in store with local storage.  A simple application but it uses the same techiques I've used on the web quiz.  We use a combination of static and dynamically created HTML element tags and class to style and structure the web page, javascript and jquery to add event listeners to respond to user inputs, using local storage to store and show user input and finally a 3rd party library to pull information from outside the website to set the current style of sections of the website.
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+First because of the hours in a day remain the same, I can just set it using bootstrap and HTML. The dynamic elements come with a nifty feature that changes the color of the hours rows with the current hour of the day.  I added event listeners to each row using Jquery to save the descriptions of each time row to the local storage, and called the local storage on browser refresh to remind the user of their tasks.  And the final touch is a third-party javascript library called Moment.js.  Moment.js is used to call the current hour and day and dynamically setting the current calender day and time row colors.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+All in all, this project was nice because it slowly blended together HTML, CSS and Javascript.  I was setting classes that weren't being used until the Javascript installed them, the HTML was being edited and styled by the user and outside information without showing the main HTML page, and the event listeners were being added by the Javascript by selecting the class rather than static hmtl element.  All in all I had fun.
 
-## User Story
+Take a Look:
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+https://philiphuang2.github.io/Work-Day-Calendar/
 
-## Acceptance Criteria
+# Screenshots
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+## Example of the Calender at 1 PM
+![Example-of-1-pm](./Assets/Images/1PM-Example.PNG)
+## Example of the Calender at 10 AM
+![Example-of-10-AM](./Assets/Images/10AM-Example.PNG)
 
-The following animation demonstrates the application functionality:
+# Credit
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-challenge-demo.gif)
+## 3rd Party Libraries
+
+### [Moment.JS](https://momentjs.com/)
+
+A 3rd party Javascript Library that pulls the current time and day.
+
+### [Jquery](https://jquery.com/)
+
+Another 3rd Party Javascript Library that helps with element selection and event listeners
+
+### [Bootstrap](https://getbootstrap.com/)
+
+A HTML and CSS framework that reduced the amount of manual styling and format that I had to do
+
+### [Font Awesome](https://fontawesome.com/)
+
+For my awesome save icon! =)
 
 
-## Grading Requirements
 
-This challenge is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
+# License
 
-* Satisfies all of the above acceptance criteria plus the following:
+MIT License
 
-  * Uses a date utility library to work with date and time
+Copyright (c) 2022 Phiip Huang
 
-### Deployment: 32%
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Application deployed at live URL
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

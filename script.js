@@ -2,6 +2,7 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 var timeLogContainer = $('.container');
 var currentHour = parseInt(moment().format("k"));
+
 var timeLogTime;
 // timeLogHolder.append(timeLogRow); 
 for (const timeRow of timeLogContainer.children()) {
